@@ -18,7 +18,7 @@ nav a:hover {
 .search-container {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 300px;
 }
 .search-container input[type=text] {
     padding: 10px;
@@ -44,3 +44,8 @@ body {
     background-image: url("./Concert1.jpg");
     background-color: rgb(65, 3, 3);
    }
+h1 {
+    text-align: center;
+    padding-top: 50px;
+    color: rgb(172, 167, 167);
+}
