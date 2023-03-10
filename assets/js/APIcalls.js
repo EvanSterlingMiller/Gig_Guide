@@ -146,4 +146,4 @@ function getApi() {
 }
 
 // getApi();
-document.getElementById('searchbutton').addEventListener('click', getApi);
+// document.getElementById('searchbutton').addEventListener('click', getApi);
