@@ -200,7 +200,7 @@ function getApi() {
 
 // get local concerts from ticketmasters API
  function concertsCall(latitude,longitude) {
-   var url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=XYPBmlXoMkahvAVuAZyfC5v6FE7Se5So&latlong=${latitude},${longitude}&radius=10&unit=miles&size=5`;
+   var url = `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&apikey=XYPBmlXoMkahvAVuAZyfC5v6FE7Se5So&latlong=${latitude},${longitude}&radius=10&unit=miles&size=5`;
 
    fetch(url)
      .then(myResponse => myResponse.json())
