@@ -2,6 +2,15 @@
 var submitButton = document.getElementById("submit-button");
 var cityInput = document.getElementById("city-input");
 
+// enter key function
+cityInput.addEventListener('keypress', function(event) {
+  if (event.key === 'Enter') {
+    submitButton.click();
+    colsole.log()
+  }
+});
+
+
 submitButton.addEventListener("click", function() {
   var tempSubmit = cityInput.value;
 
@@ -156,7 +165,10 @@ data.data.propertySearch.properties.forEach(property => {
 }
 
 
-//Roxy code
+// Roxy code
+// manually change the city in tempSubmit until tied to a submit box
+var tempSubmit = "Chicago"
+
 
 // worldwide typecase api call for location codes and coordinates (lines 6-26 code snipet)
 var encodedParams = new URLSearchParams();
