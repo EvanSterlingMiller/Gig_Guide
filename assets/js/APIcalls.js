@@ -15,11 +15,11 @@ submitButton.addEventListener("click", function() {
   var tempSubmit = cityInput.value;
 
   // worldwide typecase api call for location codes and coordinates
-  const encodedParams = new URLSearchParams();
+  var encodedParams = new URLSearchParams();
   encodedParams.append("q", tempSubmit);
   encodedParams.append("language", "en_US");
 
-  const options = {
+  var options = {
     method: 'POST',
     headers: {
       'content-type': 'application/x-www-form-urlencoded',
@@ -51,7 +51,7 @@ submitButton.addEventListener("click", function() {
 
 // get local concerts from ticketmasters API
 function concertsCall(latitude,longitude) {
-  var url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=XYPBmlXoMkahvAVuAZyfC5v6FE7Se5So&latlong=${latitude},${longitude}&radius=10&unit=miles&size=5`;
+  var url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=XYPBmlXoMkahvAVuAZyfC5v6FE7Se5So&latlong=${latitude},${longitude}&radius=10&unit=miles&classificationName=music&size=5`;
 
   fetch(url)
     .then(myResponse => myResponse.json())
@@ -62,6 +62,10 @@ function concertsCall(latitude,longitude) {
         var localConcerts =  (myEvent.dates.start.localDate) + " " + (myEvent.name);
         var concertElement = document.createElement("div");
         concertElement.textContent = localConcerts;
+        var img = document.createElement("img");
+        img.src = myEvent.images[0].url;
+        img.width = 100;
+        concertElement.appendChild(img);
         concertsElement.appendChild(concertElement);
       });
     });
@@ -69,13 +73,13 @@ function concertsCall(latitude,longitude) {
 
 // get local Restaurants from Worldwide restaurants on rapidapi.com
 function restaurantsCall(location) {
-  const encodedParams = new URLSearchParams();
+  var encodedParams = new URLSearchParams();
   encodedParams.append("language", "en_US");
   encodedParams.append("limit", "5");
   encodedParams.append("location_id",location);
- encodedParams.append("currency", "USD");
+  encodedParams.append("currency", "USD");
 
-const options = {
+var options = {
 method: 'POST',
 headers: {
   'content-type': 'application/x-www-form-urlencoded',
@@ -121,26 +125,18 @@ fetch("https://hotels4.p.rapidapi.com/properties/v2/list", {
     "coordinates": {"latitude": latitude, "longitude": longitude}
   },
   "checkInDate": {
-    "day": 10,
-    "month": 10,
-    "year": 2022
+    "day": 14,
+    "month": 7,
+    "year": 2023
   },
   "checkOutDate": {
     "day": 15,
-    "month": 10,
-    "year": 2022
+    "month": 7,
+    "year": 2023
   },
   "rooms": [
     {
       "adults": 2,
-      "children": [
-        {
-          "age": 5
-        },
-        {
-          "age": 7
-        }
-      ]
     }
   ],
   "resultsStartingIndex": 0,
@@ -169,17 +165,17 @@ data.data.propertySearch.properties.forEach(property => {
 }
 
 
-Roxy code
+// Roxy code
 // manually change the city in tempSubmit until tied to a submit box
 var tempSubmit = "Chicago"
 
 
 // worldwide typecase api call for location codes and coordinates (lines 6-26 code snipet)
-const encodedParams = new URLSearchParams();
+var encodedParams = new URLSearchParams();
 encodedParams.append("q", tempSubmit);
 encodedParams.append("language", "en_US");
 
-const options = {
+var options = {
 	method: 'POST',
 	headers: {
 		'content-type': 'application/x-www-form-urlencoded',
@@ -209,7 +205,7 @@ function getApi() {
 
 // get local concerts from ticketmasters API
  function concertsCall(latitude,longitude) {
-   var url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=XYPBmlXoMkahvAVuAZyfC5v6FE7Se5So&latlong=${latitude},${longitude}&radius=10&unit=miles&size=5`;
+   var url = `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&apikey=XYPBmlXoMkahvAVuAZyfC5v6FE7Se5So&latlong=${latitude},${longitude}&radius=10&unit=miles&size=5`;
 
    fetch(url)
      .then(myResponse => myResponse.json())
@@ -223,13 +219,13 @@ function getApi() {
 
 // get local Restaurants from Worldwide restaurants on rapidapi.com (lines 53-71 code snipet)
  function restaurantsCall(location) {
-   const encodedParams = new URLSearchParams();
+   var encodedParams = new URLSearchParams();
    encodedParams.append("language", "en_US");
    encodedParams.append("limit", "5");
    encodedParams.append("location_id",location);
    encodedParams.append("currency", "USD");
   
-   const options = {
+   var options = {
      method: 'POST',
      headers: {
        'content-type': 'application/x-www-form-urlencoded',
@@ -317,5 +313,3 @@ function getApi() {
   }
 }
 
-// getApi();
-document.getElementById('searchbutton').addEventListener('click', getApi);
