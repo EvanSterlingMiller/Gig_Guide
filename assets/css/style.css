@@ -69,12 +69,12 @@
   }
   
 /* Styles for the search bar */
-.search-container {
+.city-input {
     display: flex;
     justify-content: center;
     margin-top: 50px;
 }
-.search-container input[type=text] {
+.city-input input[type=text] {
     padding: 10px;
     font-size: 17px;
     border: none;
@@ -83,7 +83,7 @@
     background-color: white;
     width: 50%;
 }
-.search-container button {
+.submit-button button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -91,7 +91,7 @@
     border-radius: 0 5px 5px 0;
     cursor: pointer;
 }
-.search-container button:hover {
+.submit-button button:hover {
     background-color: #45a049;
 }
 body {
@@ -138,6 +138,18 @@ h1 {
     max-width: 75%;
     max-height: 75%;
     
+  }
+
+.container-search {
+    flex-basis: 30%;
+    padding: 20px;
+    background-color: rgb(44, 38, 39);
+    border: 1px solid #6d6b56;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: aliceblue;
+    opacity: 0.95;
+    height: 50px;
   }
 footer {
     text-align: center;
