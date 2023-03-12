@@ -6,7 +6,6 @@ var cityInput = document.getElementById("city-input");
 cityInput.addEventListener('keypress', function(event) {
   if (event.key === 'Enter') {
     submitButton.click();
-    colsole.log()
   }
 });
 
@@ -38,8 +37,8 @@ submitButton.addEventListener("click", function() {
     var cityName = "Gigs, Grub and Places to stay in " + (data.results.data[0].result_object.name)
 
     // display the city name
-    var cityNameElement = document.getElementById("city-name");
-    cityNameElement.textContent = cityName;
+    // var cityNameElement = document.getElementById("city-name");
+    // cityNameElement.textContent = cityName;
 
     // send location code and coordinates to additional API calls
     concertsCall(cityLatitude,cityLongitude)

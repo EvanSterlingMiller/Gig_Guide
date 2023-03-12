@@ -25,29 +25,27 @@
 	  </nav>
 
 	<!-- Search bar -->
-	<div class="search-container">
-		<form>
-			<input type="text" id="city-input" placeholder="Enter your city">
-			<button type="submit-button">Search</button>
-		</form>
-    </div>    
-
-    <section>
-        <div class="container-row">
-            <div class="container" id="concert">
-                <h1>Local Concerts</h1>
+  <section class="container-search">
+	  <label for="city-input">Enter city:</label>
+      <input type="text" id="city-input" >
+      <button id="submit-button">Get Recommendations</button>   
+  </section>
+  <section>
+      <div class="container-row">
+          <div class="container" id="concert">
+              <h1>Local Concerts</h1>
                
-                <div id="concerts"></div>
-            </div>
-            <div class="container" id="resturant">
-                <h1>Local Resturants</h1>
+              <div id="concerts"></div>
+          </div>
+          <div class="container" id="restaurant">
+              <h1>Local Restaurants</h1>
                 
-                <div id="resturants"></div>
-            </div>
+              <div id="restaurants"></div>
+          </div>
             <div class="container" id="hotel">
-                <h1>Local Hotels</h1>
+              <h1>Local Hotels</h1>
                 
-                <div id="hotels"></div>
+              <div id="hotels"></div>
                 
                 
             </div>
