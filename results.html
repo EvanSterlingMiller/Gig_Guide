@@ -25,29 +25,27 @@
 	  </nav>
 
 	<!-- Search bar -->
-	<div class="search-container">
-		<form>
-			<input type="text" id="city-input" id="searchbutton" placeholder="Enter your city">
-			<button type="submit">Search</button>
-		</form>
-    </div>    
-
-    <section>
-        <div class="container-row">
-            <div class="container" id="concert">
-                <h1>Local Concerts</h1>
-                <div id="city-name"></div>
-                <div id="concerts"></div>
-            </div>
-            <div class="container" id="resturant">
-                <h1>Local Resturants</h1>
-                <div id="city-name"></div>
-                <div id="resturants"></div>
-            </div>
+  <section class="container-search">
+	  <label for="city-input">Enter city:</label>
+      <input type="text" id="city-input" >
+      <button id="submit-button">Get Recommendations</button>   
+  </section>
+  <section>
+      <div class="container-row">
+          <div class="container" id="concert">
+              <h1>Local Concerts</h1>
+               
+              <div id="concerts"></div>
+          </div>
+          <div class="container" id="restaurant">
+              <h1>Local Restaurants</h1>
+                
+              <div id="restaurants"></div>
+          </div>
             <div class="container" id="hotel">
-                <h1>Local Hotels</h1>
-                <div id="city-name"></div>
-                <div id="hotels"></div>
+              <h1>Local Hotels</h1>
+                
+              <div id="hotels"></div>
                 
                 
             </div>
@@ -57,9 +55,8 @@
 		<p> Gig Guide 2023</p>
 		<p>Created by Thomas, Matt, Roxy, and Evan</p>
 	</footer>
-	
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 	<script src="./assets/js/script.js"></script>
-    <script src="./assets/js/APIcalls.js"></script>
+  <script src="./assets/js/APIcalls.js"></script>
 </body>
 </html>
