@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="bulma.io test\test-bulma.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+  
+    <script src="https://kit.fontawesome.com/01a62142b3.js" crossorigin="anonymous"></script>
+  </head>
+<body>
+	
+    <nav class="navbar is-transparent">
+		<div class="navbar-brand">
+		  <a class="navbar-item is-size-1 is-family-monospace" >
+			Gig Guide
+		  </a>
+		  <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+			<span></span>
+			<span></span>
+			<span></span>
+		  </div>
+		</div>
+	  <!-- icons and nav items -->
+	   <div id="navbarBasicExample" class="navbar-menu">
+		  <div class="navbar-end">
+			<a class="navbar-item" href="C:\Users\tommy\jan-test\bulma.io test\index docs\bulma.html">
+			  <span class="icon-text">
+				<span class="icon">
+				  <i class="fa-solid fa-house"></i>
+				</span>
+				<span>Home</span>
+			  </span>
+			</a>
+  
+			<a class="navbar-item" href="C:\Users\tommy\jan-test\bulma.io test\index docs\about-tab.html">
+			  <span class="icon-text">
+				<span class="icon">
+				  <i class="fa-solid fa-info"></i>
+				</span>
+				<span>About</span>
+			  </span>
+			</a>
+  
+			<a class="navbar-item" href="C:\Users\tommy\jan-test\bulma.io test\index docs\contact-tab.html">
+			  <span class="icon-text">
+				<span class="icon">
+				  <i class="fa-solid fa-address-card"></i>
+				</span>
+				<span>Contact</span>
+			  </span>
+			</a>
+  
+			<a class="navbar-item" href="C:\Users\tommy\jan-test\bulma.io test\index docs\sign-up-tab.html">
+			  <span class="icon-text">
+				<span class="icon">
+				  <i class="fa-solid fa-user-plus"></i>
+				</span>
+				<span>Sign Up</span>
+			  </span>
+			</a>
+			
+		</div>
+	  </nav>
+
+	
+	<!-- hero tab includes search bar-->
+    <section class="hero is-small is-warning">
+		<style></style>
+		<div class="hero-body">
+		  <p class="title is-4">
+			Find some fun in a city near you!
+		  </p>
+		  <p class="subtitle my-1">
+			<div class="field is-grouped">
+				<p class="control is-expanded has-icons-left">
+				  <input class="input" type="text" placeholder="Ex: Boston">
+				  <span class="icon is-left">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				  </span>
+				</p>
+				<p class="control">
+				  <a class="button has-background-grey has-text-white-ter">
+					Search
+				  </a>
+				</p>
+			  </div>
+	  </section>
+	</div>
+	
+<!-- Slide Show with image and captions -->
+
+
+
+
+
+
+
+	<div class="tile is-ancestor mt-2">
+		<div class="tile is-vertical is-6">
+		  <div class="tile">
+			<div class="tile is-parent is-vertical">
+			  <article class="tile is-child notification has-background-grey-lighter">
+				<p class="title">Concert API info</p>
+				<p class="subtitle">text</p>
+			  </article>
+			  <article class="tile is-child notification is-warning">
+				<p class="title">Restaurant/Hotel API info</p>
+				<p class="subtitle">text</p>
+			  </article>
+			</div>
+			<!-- <div class="tile is-parent">
+			  <article class="tile is-child notification has-background-warning-light">
+				<p class="title">Slide Show</p>
+				<p class="subtitle">if/when I can figure it out</p> -->
+				
+			  </article>
+			</div>
+		  </div>
+		  <div class="tile is-parent">
+			<article class="tile is-child notification has-background-grey has-text-white-ter">
+			  <p class="title">Additional API info?</p>
+			  <p class="subtitle">Idk this box just felt cool</p>
+			  <div class="content">
+				<!-- Content -->
+			  </div>
+			</article>
+		  </div>
+		</div>
+		<div class="tile is-parent">
+		  <article class="tile is-child notification has-background-black-ter has-text-white-ter">
+			<div class="content">
+			  <p class="title">Fake Testimonials?</p>
+			  <p class="subtitle">text</p>
+			  <div class="content">
+				<!-- Content -->
+			  </div>
+			</div>
+		  </article>
+		</div>
+	  </div>
+    
+	  <footer class="footer has-background-warning-light ">
+		<div class="content has-text-centered">
+		  <p>
+			<strong>Gig Guide</strong> by <a href="https://jgthms.com">Ctrl-Alt-Elites</a>. The source code is licensed
+			<a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+			is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+		  </p>
+		</div>
+	  </footer>
+	<ul id="concert-list"></ul>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="./assets/js/APIcalls.js"></script>
+	<script src="bulma.io test\bulma.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+	<script>
+		bulmaCarousel.attach('#slider', {
+			slidesToScroll: 1,
+			slidesToShow: 1,
+			infinite: true,
+			autoplay: true,
+		});
+	</script>
+</body>
+</html>

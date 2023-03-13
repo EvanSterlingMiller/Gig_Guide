@@ -1,0 +1,74 @@
+<!-- commented out the original code and input a few changes, admittedly didn't get as far as I would've liked -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Local Recommendations</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    
+  </head>
+  <body>
+    <!-- <label for="city-input">Enter city:</label>
+    <input type="text" id="city-input" />
+    <button id="submit-button">Get Recommendations</button>
+    <h1 id="city-name"></h1>
+    <div id="concerts"></div>
+    <div id="hotels"></div>
+    <div id="restaurants"></div> -->
+
+
+    <!-- copied bulma html framework for a searchbar and added the id=city-input and id-submit-button
+      to keep it functional with the JS -->
+    <div class="field has-addons">
+      <div class="control">
+        <input class="input" type="text" id="city-input" placeholder="Ex: Boston">
+      </div>
+      <div class="control">
+        <a class="button is-info" id="submit-button" >
+          Get Recommendations
+        </a>
+      </div>
+    </div>
+    
+      <!-- <h1 id="city-name"></h1>
+      <div class="columns is-family-monospace">
+        <div class="column">
+          <div id="concerts"></div>
+        </div>
+        <div class="column">
+          <div id="hotels"></div>
+        </div>
+        <div class="column">
+          <div id="restaurants"></div>
+        </div> -->
+
+        <!-- created a column for the h1, and attempted to nest results underneath
+        formatting isn't great was playing around with the inspect on devtools and
+        that might lead us to some answers -->
+        <div class="columns">
+          <div class="column is-full">
+            <p class="bd-notification is-info"><h1 id="city-name"></h1></p>
+            
+            <div class="columns is-mobile">
+              <div class="column">
+                <p class="bd-notification is-info"><div id="concerts"></div></p>
+              </div>
+              <div class="column">
+                <p class="bd-notification is-info"><div id="hotels"></div></p>
+              </div>
+              <div class="column">
+                <p class="bd-notification is-info"><div id="restaurants"></div></p>
+              </div>
+            </div>
+          </div>
+
+      <!-- <div id="concerts"></div>
+      <div id="hotels"></div>
+      <div id="restaurants"></div> -->
+     
+    
+
+    <script src="./assets/js/APIcalls.js"></script>
+</body>
+</html>

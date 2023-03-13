@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Gig Guide Results</title>
+</head>
+<body>
+	
+    <!-- Navigation bar -->
+	<nav class="navbar">
+		<div class="burger-icon">
+		  <div class="line"></div>
+		  <div class="line"></div>
+		  <div class="line"></div>
+		</div>
+		<ul class="navbar-menu">
+		  <li><a href="#">Home</a></li>
+		  <li><a href="#">About</a></li>
+		  <li><a href="#">Services</a></li>
+		  <li><a href="#">Contact</a></li>
+		</ul>
+	  </nav>
+
+	<!-- Search bar -->
+	<div class="search-container">
+		<form>
+			<input type="text" id="city-input" id="searchbutton" placeholder="Enter your city">
+			<button type="submit">Search</button>
+		</form>
+    </div>    
+
+    <section>
+        <div class="container-row">
+            <div class="container" id="concert">
+                <h1>Local Concerts</h1>
+                <div id="city-name"></div>
+                <div id="concerts"></div>
+            </div>
+            <div class="container" id="resturant">
+                <h1>Local Resturants</h1>
+                <div id="city-name"></div>
+                <div id="resturants"></div>
+            </div>
+            <div class="container" id="hotel">
+                <h1>Local Hotels</h1>
+                <div id="city-name"></div>
+                <div id="hotels"></div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer> 
+		<p> Gig Guide 2023</p>
+		<p>Created by Thomas, Matt, Roxy, and Evan</p>
+	</footer>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="./assets/js/script.js"></script>
+    <script src="./assets/js/APIcalls.js"></script>
+</body>
+</html>
