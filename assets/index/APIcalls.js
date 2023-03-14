@@ -34,7 +34,6 @@ submitButton.addEventListener("click", function() {
     var cityLocationID = data.results.data[0].result_object.location_id
     var cityLatitude = data.results.data[0].result_object.latitude
     var cityLongitude = data.results.data[0].result_object.longitude
-    var cityName = "Gigs, Grub and Places to stay in " + (data.results.data[0].result_object.name)
 
     // send location code and coordinates to additional API calls
     concertsCall(cityLatitude,cityLongitude)
@@ -56,7 +55,7 @@ function concertsCall(latitude,longitude) {
       myData._embedded.events.forEach(myEvent => {
         var localConcerts =  (myEvent.dates.start.localDate) + " " + (myEvent.name);
 
-        var maxLength = 40; // maximum length of string
+        var maxLength = 35; // maximum length of string
         if (localConcerts.length > maxLength) {
           localConcerts = localConcerts.slice(0, maxLength); // limit 
           var lastSpaceIndex = localConcerts.lastIndexOf(" ");
@@ -70,7 +69,7 @@ function concertsCall(latitude,longitude) {
         
         var img = document.createElement("img");
         img.src = myEvent.images[0].url;
-        img.width = 100;
+        img.width = 150;
         
         var imgWrapper = document.createElement("div");
         imgWrapper.appendChild(img);
@@ -105,14 +104,16 @@ fetch('https://worldwide-restaurants.p.rapidapi.com/search', options)
 var restaurantsElement = document.getElementById("restaurants");
 restaurantsElement.innerHTML = ""; // clear previous results
 data.results.data.forEach(property => {
-  var localRestaurants =  (property.name) + " | " + (property.address);
-  var restaurantElement = document.createElement("div");
-  restaurantElement.textContent = localRestaurants;
-  restaurantsElement.appendChild(restaurantElement);
+ var addressParts = property.address.split(", ");
+ var localRestaurants =  (property.name) + " | " + addressParts[0];
+ var restaurantElement = document.createElement("div");
+ restaurantElement.textContent = localRestaurants;
+ restaurantsElement.appendChild(restaurantElement);
 });
 })
 .catch(error => console.error(error));
 }
+
 
 // get local hotels from hotel4 on rapidapi.com
 function hotelsCall(latitude,longitude) {
@@ -123,7 +124,7 @@ fetch("https://hotels4.p.rapidapi.com/properties/v2/list", {
 "method": "POST",
 "headers": {
   "Content-Type": "application/json",
-  "X-Rapidapi-Key": "edf9b22aafmsh019b8390d5e71e2p1ea644jsnf46c23929872",
+  "X-Rapidapi-Key": "b26789b06bmsh4d9abf489373262p19b7f7jsn7e21d9304ef3",
   "X-Rapidapi-Host": "hotels4.p.rapidapi.com"
 },
 "body": JSON.stringify({
