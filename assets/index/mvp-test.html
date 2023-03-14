@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mvp test</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="mvp-test.css">
+    
+
+    <script src="https://kit.fontawesome.com/01a62142b3.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+<header>
+    <nav class="navbar is-transparent">
+        <div class="navbar-brand">
+            <a class="navbar-item is-size-1 is-family-monospace">
+                Gig Guide
+            </a>
+            <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- icons and nav items -->
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="C:\Users\tommy\jan-test\bulma.io test\index docs\bulma.html">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fa-solid fa-house"></i>
+                        </span>
+                        <span>Home</span>
+                    </span>
+                </a>
+
+                <a class="navbar-item" href="C:\Users\tommy\jan-test\bulma.io test\index docs\about-tab.html">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fa-solid fa-info"></i>
+                        </span>
+                        <span>About</span>
+                    </span>
+                </a>
+
+                <a class="navbar-item" href="C:\Users\tommy\jan-test\bulma.io test\index docs\contact-tab.html">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fa-solid fa-address-card"></i>
+                        </span>
+                        <span>Contact</span>
+                    </span>
+                </a>
+
+                <a class="navbar-item" class="js-modal-trigger" data-target="modal-js-example">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </span>
+                        <span>Sign Up</span>
+                    </span>
+                </a>
+
+            </div>
+    </nav>
+    <section >
+        <div class="main-content">
+            <section class="hero is-small" class="searchBox">
+                <style></style>
+                <div class="hero-body">
+                    <p class="title is-4" id="search-text">
+                        Find some fun in a city near you!
+                    </p>
+                    <p class="subtitle my-1">
+                    <div class="field is-grouped">
+                        <p class="control is-expanded has-icons-left">
+                            <input class="input" id="city-input" type="text" placeholder="Ex: Boston">
+                            <span class="icon is-left">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                        </p>
+                        <p class="control">
+                            <a class="button has-background-grey has-text-white-ter" id="submit-button">
+                                Search
+                            </a>
+                        </p>
+                    </div>
+    
+            </section>
+            
+        </div>
+    </section>
+</header>
+
+    <body> 
+    <section class="is-family-monospace">
+        <h1 id="city-name"></h1>
+    </section>
+    <section class="results">
+        <div class="columns mx-5 is-family-monospace">
+            <div class="column">
+                <div  class="box-1">Concerts <div id="concerts"></div></div>
+                    
+            </div>
+            <div class="column">
+                <div class="box-2">Hotels <div id="hotels"></div></div>
+                    
+            </div>
+            <div class="column">
+                <div class="box-3">Restaurants<div id="restaurants"></div></div>
+                    
+            </div>
+        <!-- <div class="box-1"></div>
+        <div class="box-2"></div>
+        <div class="box-3"></div> -->
+
+
+
+
+    </section>
+    <div id="modal-js-example" class="modal">
+        <div class="modal-background"></div>
+      
+        <div class="modal-content">
+          <div class="box">
+            <p>Modal JS example</p>
+            <!-- Your content -->
+          </div>
+        </div>
+      
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+    <script src="APIcalls.js"></script>
+    <script src="script.js"></script>
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+</body>
