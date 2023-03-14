@@ -1,187 +1,254 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gig Guide Contact Us!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/css/bulma.css">
-  
-    <script src="https://kit.fontawesome.com/01a62142b3.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gig Guide Contact Us!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/index/contact-tab.css">
+
+  <script src="https://kit.fontawesome.com/01a62142b3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
     <nav class="navbar is-transparent">
-        <div class="navbar-brand">
-          <a class="navbar-item is-size-1 is-family-monospace" >
-            Gig Guide
-          </a>
-          <div class="navbar-burger" data-target="navbarExampleTransparentExample">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-1 is-family-monospace">
+          Gig Guide
+        </a>
+        <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+      </div>
       <!-- icons and nav items -->
-       <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-end">
-            <a class="navbar-item" href="index.html">
-              <span class="icon-text">
-                <span class="icon">
-                  <i class="fa-solid fa-house"></i>
-                </span>
-                <span>Home</span>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="index.html">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="fa-solid fa-house"></i>
               </span>
-            </a>
-  
-            <a class="navbar-item is-warning" href="about-tab.html">
-              <span class="icon-text">
-                <span class="icon is is-warning">
-                  <i class="fa-solid fa-info"></i>
-                </span>
-                <span>About</span>
-              </span>
-            </a>
-  
-            <a class="navbar-item" href="contact-tab.html">
-              <span class="icon-text">
-                <span class="icon">
-                  <i class="fa-solid fa-address-card"></i>
-                </span>
-                <span>Contact</span>
-              </span>
-            </a>
-  
-            <a class="navbar-item" href="sign-up-tab.html">
-              <span class="icon-text">
-                <span class="icon">
-                  <i class="fa-solid fa-user-plus"></i>
-                </span>
-                <span>Sign Up</span>
-              </span>
-            </a>
-        </div>
-      </nav>
+              <span>Home</span>
+            </span>
+          </a>
 
-      <section class="hero is-small is-warning">
-        <style></style>
-        <div class="hero-body">
-          <p class="title">
-           Contact Us!
-          </p>
-          <p class="subtitle">
-           We'd Love to hear your feedback!
-          </p>
-        </div>
-      </section>
+          <a class="navbar-item is-warning" href="about-tab.html">
+            <span class="icon-text">
+              <span class="icon is is-warning">
+                <i class="fa-solid fa-info"></i>
+              </span>
+              <span>About</span>
+            </span>
+          </a>
 
-      <div class="field is-horizontal mt-5" >
-        <div class="field-label is-normal">
-          <label class="label">From</label>
-        </div>
-        <div class="field-body">
-          <div class="field">
-            <p class="control is-expanded has-icons-left">
-              <input class="input" type="text" placeholder="Name">
-              <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
+          <a class="navbar-item" href="contact-tab.html">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="fa-solid fa-address-card"></i>
               </span>
+              <span>Contact</span>
+            </span>
+          </a>
+
+          <a href=# class="navbar-item" id="myBtn">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="fa-solid fa-user-plus"></i>
+              </span>
+              <span>Sign Up</span>
+            </span>
+            </button>
+          </a>
+        </div>
+    </nav>
+
+    <section class="hero is-small" id="contact">
+      <style></style>
+      <div class="hero-body">
+        <p class="title has-text-white-ter">
+          Contact Us!
+        </p>
+        <p class="subtitle has-text-white-ter">
+          We'd Love to hear your feedback!
+        </p>
+      </div>
+    </section>
+  </header>
+
+  <main class="mx-6 mt-6">
+    <div class="field is-horizontal mt-5">
+      <div class="field-label is-normal">
+        <label class="label">From</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <p class="control is-expanded has-icons-left">
+            <input class="input" type="text" placeholder="Name">
+            <span class="icon is-small is-left">
+              <i class="fas fa-user"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control is-expanded has-icons-left has-icons-right">
+            <input class="input is-success" type="email" placeholder="Email">
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label"></div>
+      <div class="field-body">
+        <div class="field is-expanded">
+          <div class="field has-addons">
+            <p class="control">
+              <a class="button is-static">
+                +1
+              </a>
+            </p>
+            <p class="control is-expanded">
+              <input class="input" type="tel" placeholder="Your phone number">
             </p>
           </div>
-          <div class="field">
-            <p class="control is-expanded has-icons-left has-icons-right">
-              <input class="input is-success" type="email" placeholder="Email">
-              <span class="icon is-small is-left">
-                <i class="fas fa-envelope"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i class="fas fa-check"></i>
-              </span>
-            </p>
-          </div>
+          <p class="help">9 Digit Phone number</p>
         </div>
       </div>
-      
-      <div class="field is-horizontal">
-        <div class="field-label"></div>
-        <div class="field-body">
-          <div class="field is-expanded">
-            <div class="field has-addons">
-              <p class="control">
-                <a class="button is-static">
-                  +1
-                </a>
-              </p>
-              <p class="control is-expanded">
-                <input class="input" type="tel" placeholder="Your phone number">
-              </p>
-            </div>
-            <p class="help">9 Digit Phone number</p>
-          </div>
-        </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Preferred Contact Method</label>
       </div>
-      
-      <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label class="label">Preferred Contact Method</label>
-        </div>
-        <div class="field-body">
-          <div class="field is-narrow">
-            <div class="control">
-              <div class="select is-fullwidth">
-                <select>
-                  <option>Email</option>
-                  <option>Phone Call</option>
-                  <option>Text Message</option>
-                </select>
-              </div>
+      <div class="field-body">
+        <div class="field is-narrow">
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select>
+                <option>Email</option>
+                <option>Phone Call</option>
+                <option>Text Message</option>
+              </select>
             </div>
           </div>
         </div>
       </div>
-     
-      <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label class="label">Subject</label>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Subject</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-danger" type="text" placeholder="e.g. Partnership opportunity">
+          </div>
+          <p class="help is-danger">
+            This field is required
+          </p>
         </div>
-        <div class="field-body">
-          <div class="field">
-            <div class="control">
-              <input class="input is-danger" type="text" placeholder="e.g. Partnership opportunity">
-            </div>
-            <p class="help is-danger">
-              This field is required
-            </p>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label"></label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <textarea class="textarea" placeholder="Comments,Questions,Concerns,etc..."></textarea>
           </div>
         </div>
       </div>
-      
-      <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label class="label"></label>
-        </div>
-        <div class="field-body">
-          <div class="field">
-            <div class="control">
-              <textarea class="textarea" placeholder="Comments,Questions,Concerns,etc..."></textarea>
-            </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label">
+        <!-- Left empty for spacing -->
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <button class="button has-background-warning-light">
+              Send message
+            </button>
           </div>
         </div>
       </div>
-      
-      <div class="field is-horizontal">
-        <div class="field-label">
-          <!-- Left empty for spacing -->
+    </div>
+  </main>
+    <script src="./assets/index/contact.js"></script>
+
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-card">
+          <header class="modal-card-head" id="modalHead">
+            <p class="modal-card-title">Membership Sign Up!</p>
+            <button class="delete" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body" id="modalBody">
+              <div class="field">
+                  <label class="label">Name</label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="e.g Alex Smith">
+                  </div>
+                </div>
+                
+                <div class="field">
+                  <label class="label">Email</label>
+                  <div class="control">
+                    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+                  </div>
+                </div>
+          </section>
+          <footer class="modal-card-foot" id="modalFoot">
+            <button class="button" id="modalsubBtn">Join The Club</button>
+            <button class="button">Cancel</button>
+          </footer>
         </div>
-        <div class="field-body">
-          <div class="field">
-            <div class="control">
-              <button class="button has-background-warning-light">
-                Send message
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <script src="./assets/index/contact.js"></script>
-  </body>
+    
+    </div>
+
+    <script>
+      var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("delete")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+  modal.style.display = "none";
+}
+}
+    </script>
+
+</body>
+
 </html>
